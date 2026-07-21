@@ -1,5 +1,9 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { RouterOutlet } from '@angular/router';
+
+import { Footer } from './shared/components/footer/footer';
+import { Header } from './shared/components/header/header';
 
 interface HealthResponse {
   status: string;
@@ -7,7 +11,7 @@ interface HealthResponse {
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [RouterOutlet, Header, Footer],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })

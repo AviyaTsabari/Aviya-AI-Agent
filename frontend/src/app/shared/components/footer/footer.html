@@ -1,1 +1,7 @@
-<p>footer works!</p>
+<footer class="site-footer">
+  <p>&copy; Aviya Tsabari</p>
+
+  @if (backendStatus()) {
+    <p class="backend-status">Backend: {{ backendStatus() }}</p>
+  }
+</footer>

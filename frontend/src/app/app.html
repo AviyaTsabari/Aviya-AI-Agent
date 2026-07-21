@@ -1,17 +1,7 @@
-<main class="app-container">
-  <section class="status-card">
-    <p class="eyebrow">AVIYA AI AGENT</p>
+<app-header />
 
-    <h1>Research workflow management</h1>
-
-    <p>
-      A full-stack platform for managing laboratory projects,
-      experiments, equipment, tasks, and AI-assisted workflows.
-    </p>
-
-    <div class="backend-status">
-      <span>Backend status:</span>
-      <strong>{{ backendStatus() }}</strong>
-    </div>
-  </section>
+<main class="app-content">
+  <router-outlet />
 </main>
+
+<app-footer [backendStatus]="backendStatus()" />
