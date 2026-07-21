@@ -1,1 +1,9 @@
-<p>experience works!</p>
+@if (experience$ | async; as data) {
+  <section class="experience-list">
+    @for (item of data.experience; track item.id) {
+      <app-experience-item [item]="item" />
+    }
+  </section>
+} @else {
+  <p>Loading experience…</p>
+}

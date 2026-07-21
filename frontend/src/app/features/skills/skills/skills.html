@@ -1,1 +1,9 @@
-<p>skills works!</p>
+@if (skills$ | async; as data) {
+  <section class="skills-list">
+    @for (category of data.categories; track category.name) {
+      <app-skill-category [category]="category" />
+    }
+  </section>
+} @else {
+  <p>Loading skills…</p>
+}

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+
+import { SkillCategory as SkillCategoryModel } from '../../../core/models/skill.model';
 
 @Component({
   selector: 'app-skill-category',
@@ -6,4 +8,6 @@ import { Component } from '@angular/core';
   templateUrl: './skill-category.html',
   styleUrl: './skill-category.scss',
 })
-export class SkillCategory {}
+export class SkillCategory {
+  readonly category = input.required<SkillCategoryModel>();
+}

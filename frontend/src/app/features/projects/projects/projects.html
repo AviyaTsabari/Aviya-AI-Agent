@@ -1,1 +1,9 @@
-<p>projects works!</p>
+@if (projects$ | async; as data) {
+  <section class="projects-list">
+    @for (project of data.projects; track project.id) {
+      <app-project-card [project]="project" />
+    }
+  </section>
+} @else {
+  <p>Loading projects…</p>
+}

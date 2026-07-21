@@ -1,1 +1,24 @@
-<p>profile works!</p>
+@if (profile$ | async; as profile) {
+  <article class="profile">
+    <h1>{{ profile.name }}</h1>
+    <p class="title">{{ profile.title }}</p>
+    <p class="headline">{{ profile.headline }}</p>
+    <p class="location">{{ profile.location }}</p>
+
+    <section>
+      <h2>Summary</h2>
+      <p>{{ profile.summary }}</p>
+    </section>
+
+    <section>
+      <h2>Interests</h2>
+      <ul>
+        @for (interest of profile.interests; track interest) {
+          <li>{{ interest }}</li>
+        }
+      </ul>
+    </section>
+  </article>
+} @else {
+  <p>Loading profile…</p>
+}

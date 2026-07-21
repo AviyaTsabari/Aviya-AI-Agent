@@ -1,9 +1,17 @@
-import { Component } from '@angular/core';
+import { AsyncPipe } from '@angular/common';
+import { Component, inject } from '@angular/core';
+
+import { ExperienceService } from '../../../core/services/experience.service';
+import { ExperienceItem } from '../experience-item/experience-item';
 
 @Component({
   selector: 'app-experience',
-  imports: [],
+  imports: [AsyncPipe, ExperienceItem],
   templateUrl: './experience.html',
   styleUrl: './experience.scss',
 })
-export class Experience {}
+export class Experience {
+  private readonly experienceService = inject(ExperienceService);
+
+  protected readonly experience$ = this.experienceService.getExperience();
+}
