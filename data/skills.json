@@ -1,0 +1,57 @@
+{
+  "categories": [
+    {
+      "name": "Programming Languages",
+      "skills": [
+        { "name": "Python", "level": "Intermediate" },
+        { "name": "TypeScript", "level": "Intermediate" },
+        { "name": "JavaScript", "level": "Intermediate" },
+        { "name": "C", "level": "Intermediate" },
+        { "name": "C#", "level": "Intermediate" },
+        { "name": "SQL", "level": "Advanced" }
+      ]
+    },
+    {
+      "name": "Backend",
+      "skills": [
+        { "name": "FastAPI", "level": "Advanced" },
+        { "name": "Pydantic", "level": "Advanced" },
+        { "name": "Uvicorn", "level": "Intermediate" },
+        { "name": "REST API design", "level": "Advanced" }
+      ]
+    },
+    {
+      "name": "Frontend",
+      "skills": [
+        { "name": "Angular", "level": "Intermediate" },
+        { "name": "HTML", "level": "Advanced" },
+        { "name": "CSS", "level": "Intermediate" }
+      ]
+    },
+    {
+      "name": "Databases",
+      "skills": [
+        { "name": "PostgreSQL", "level": "Advanced" },
+        { "name": "SQL", "level": "Advanced" }
+      ]
+    },
+    {
+      "name": "Computer Science Foundations",
+      "skills": [
+        { "name": "Algorithms", "level": "Advanced" },
+        { "name": "Data structures", "level": "Advanced" },
+        { "name": "Compiler construction", "level": "Intermediate" },
+        { "name": "Reverse engineering", "level": "Intermediate" }
+      ]
+    },
+    {
+      "name": "Tools & Workflow",
+      "skills": [
+        { "name": "Git", "level": "Advanced" },
+        { "name": "GitHub", "level": "Advanced" },
+        { "name": "Visual Studio Code", "level": "Advanced" },
+        { "name": "PowerShell", "level": "Intermediate" }
+      ]
+    }
+  ]
+}

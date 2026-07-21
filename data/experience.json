@@ -1,0 +1,18 @@
+{
+  "experience": [
+    {
+      "id": "example-role",
+      "title": "Software Developer",
+      "company": "",
+      "employmentType": "Full-time",
+      "location": "",
+      "startDate": "",
+      "endDate": "",
+      "current": false,
+      "description": "Describe your responsibilities and impact in this role.",
+      "responsibilities": [],
+      "technologies": [],
+      "achievements": []
+    }
+  ]
+}

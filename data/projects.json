@@ -1,0 +1,52 @@
+{
+  "projects": [
+    {
+      "id": "aviya-ai-agent",
+      "name": "Aviya AI Agent",
+      "shortDescription": "An AI-powered personal career agent that answers recruiter questions about my professional background.",
+      "description": "A full-stack application that lets recruiters ask questions about my experience and receive focused, relevant answers through an interactive chat interface, backed by a structured personal knowledge base.",
+      "role": "Full-Stack Developer",
+      "technologies": ["Angular", "TypeScript", "FastAPI", "Python", "Pydantic", "PostgreSQL"],
+      "highlights": [
+        "Full-stack architecture with Angular frontend and FastAPI backend",
+        "REST API design",
+        "Structured personal knowledge base",
+        "Planned AI integration for context-aware answers"
+      ],
+      "repositoryUrl": "https://github.com/AviyaTsabari/Aviya-AI-Agent",
+      "liveUrl": "",
+      "status": "In progress"
+    },
+    {
+      "id": "compiler-project",
+      "name": "Compiler Project",
+      "shortDescription": "A compiler built as part of compiler construction coursework.",
+      "description": "Implemented core stages of a compiler including lexical analysis, parsing, and code generation, demonstrating understanding of language processing and formal grammars.",
+      "role": "Developer",
+      "technologies": ["C", "Compiler design"],
+      "highlights": [
+        "Lexical analysis and tokenization",
+        "Parsing and syntax analysis",
+        "Code generation"
+      ],
+      "repositoryUrl": "",
+      "liveUrl": "",
+      "status": "Completed"
+    },
+    {
+      "id": "reverse-engineering-project",
+      "name": "Reverse Engineering Project",
+      "shortDescription": "Analysis and reverse engineering of compiled programs.",
+      "description": "Applied reverse engineering techniques to analyze program behavior, understand binary structure, and demonstrate problem-solving on low-level systems.",
+      "role": "Developer",
+      "technologies": ["Reverse engineering", "Assembly", "Debugging tools"],
+      "highlights": [
+        "Static and dynamic analysis",
+        "Low-level problem solving"
+      ],
+      "repositoryUrl": "",
+      "liveUrl": "",
+      "status": "Completed"
+    }
+  ]
+}

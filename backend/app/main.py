@@ -1,10 +1,11 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-
+from app.api.knowledge import router as knowledge_router
 
 app = FastAPI(
-    title="LabFlow AI API",
-    version="0.1.0",
+    title="Aviya AI Agent API",
+    description="AI-powered career agent representing Aviya Tsabari.",
+    version="1.0.0",
 )
 
 origins = [
@@ -22,7 +23,7 @@ app.add_middleware(
 
 @app.get("/")
 def read_root() -> dict[str, str]:
-    return {"message": "LabFlow AI backend is running"}
+    return {"message": "Aviya AI Agent backend is running"}
 
 
 @app.get("/health")

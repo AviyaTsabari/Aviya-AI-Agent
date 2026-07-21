@@ -1,0 +1,44 @@
+{
+  "name": "Aviya Tsabari",
+  "title": "Software Developer",
+  "headline": "Computer Science graduate specializing in software development, databases, compilers, algorithms, and reverse engineering.",
+  "location": "Israel",
+  "languages": [
+    { "language": "Hebrew", "proficiency": "Native" },
+    { "language": "English", "proficiency": "Professional working proficiency" }
+  ],
+  "contact": {
+    "email": "",
+    "phone": "",
+    "github": "https://github.com/AviyaTsabari",
+    "linkedin": "",
+    "website": ""
+  },
+  "summary": "Computer Science graduate with hands-on experience in full-stack development, REST API design, databases, compiler construction, algorithms, and reverse engineering. Passionate about building practical, product-oriented software and eager to grow in a junior software development role.",
+  "education": [
+    {
+      "degree": "B.Sc. in Computer Science",
+      "institution": "",
+      "startYear": "",
+      "endYear": "",
+      "highlights": [
+        "Compiler construction",
+        "Algorithms and data structures",
+        "Databases",
+        "Reverse engineering"
+      ]
+    }
+  ],
+  "interests": [
+    "Full-stack development",
+    "Backend systems",
+    "Databases",
+    "Compilers",
+    "AI-assisted applications"
+  ],
+  "rolePreferences": {
+    "seeking": ["Junior Software Developer", "Backend Developer", "Full-Stack Developer"],
+    "workType": ["Full-time"],
+    "remote": "Open to remote, hybrid, or on-site"
+  }
+}
