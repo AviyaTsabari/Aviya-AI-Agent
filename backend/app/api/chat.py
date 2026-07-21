@@ -1,4 +1,3 @@
-from anthropic import APIError
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 
@@ -23,7 +22,7 @@ class ChatResponse(BaseModel):
 def chat(request: ChatRequest) -> ChatResponse:
     try:
         reply = get_chat_response(request.message, request.history)
-    except APIError as exc:
+    except Exception as exc:
         raise HTTPException(
             status_code=502, detail="Chat service is unavailable right now."
         ) from exc

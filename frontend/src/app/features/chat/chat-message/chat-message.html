@@ -1,1 +1,3 @@
-<p>chat-message works!</p>
+<article class="chat-message" [class.chat-message--user]="message().role === 'user'">
+  <p>{{ message().content }}</p>
+</article>

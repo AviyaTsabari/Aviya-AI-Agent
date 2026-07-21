@@ -1,0 +1,20 @@
+.chat-message {
+  max-width: 75%;
+  margin-bottom: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.chat-message--user {
+  margin-left: auto;
+  background: #111827;
+  color: #fff;
+}
+
+p {
+  margin: 0;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}

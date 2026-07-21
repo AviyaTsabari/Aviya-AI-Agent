@@ -1,1 +1,12 @@
-<p>chat-input works!</p>
+<div class="chat-input">
+  <input
+    type="text"
+    placeholder="Ask me about my background..."
+    [value]="draft()"
+    [disabled]="disabled()"
+    (input)="updateDraft($event)"
+    (keydown.enter)="submit()"
+    autocomplete="off"
+  />
+  <button type="button" [disabled]="disabled()" (click)="submit()">Send</button>
+</div>
