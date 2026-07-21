@@ -20,6 +20,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.include_router(knowledge_router)
+
 
 @app.get("/")
 def read_root() -> dict[str, str]:

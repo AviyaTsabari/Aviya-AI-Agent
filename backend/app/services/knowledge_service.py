@@ -3,7 +3,7 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
-DATA_DIR = Path(__file__).resolve().parents[3] / "knowledge"
+DATA_DIR = Path(__file__).resolve().parents[3] / "data"
 
 def _load_json(filename: str) -> Any:
     with open(DATA_DIR / filename, encoding="utf-8") as f:
