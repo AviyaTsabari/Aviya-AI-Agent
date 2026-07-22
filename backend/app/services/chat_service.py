@@ -6,7 +6,7 @@ from pydantic import BaseModel
 
 from app.services.knowledge_service import get_knowledge_base
 
-MODEL = "claude-sonnet-5"
+MODEL = "claude-haiku-4-5"
 
 _client = Anthropic()
 
