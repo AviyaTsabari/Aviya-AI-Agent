@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { Observable } from 'rxjs';
 
+import { environment } from '../../../environments/environment';
 import { ExperienceResponse } from '../models/experience.model';
 
 @Injectable({
@@ -9,7 +10,7 @@ import { ExperienceResponse } from '../models/experience.model';
 })
 export class ExperienceService {
   private readonly http = inject(HttpClient);
-  private readonly apiUrl = 'http://127.0.0.1:8000/api/experience';
+  private readonly apiUrl = `${environment.apiUrl}/api/experience`;
 
   getExperience(): Observable<ExperienceResponse> {
     return this.http.get<ExperienceResponse>(this.apiUrl);

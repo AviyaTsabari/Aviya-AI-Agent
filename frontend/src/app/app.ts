@@ -2,6 +2,7 @@ import { Component, inject, OnInit, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { RouterOutlet } from '@angular/router';
 
+import { environment } from '../environments/environment';
 import { Footer } from './shared/components/footer/footer';
 import { Header } from './shared/components/header/header';
 
@@ -26,7 +27,7 @@ export class App implements OnInit {
 
   private checkBackendHealth(): void {
     this.http
-      .get<HealthResponse>('http://127.0.0.1:8000/health')
+      .get<HealthResponse>(`${environment.apiUrl}/health`)
       .subscribe({
         next: (response) => {
           this.backendStatus.set(response.status);

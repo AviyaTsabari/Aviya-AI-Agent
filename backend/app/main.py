@@ -1,3 +1,5 @@
+import os
+
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -13,9 +15,8 @@ app = FastAPI(
     version="1.0.0",
 )
 
-origins = [
-    "http://localhost:4200",
-]
+default_origins = "http://localhost:4200"
+origins = os.environ.get("ALLOWED_ORIGINS", default_origins).split(",")
 
 app.add_middleware(
     CORSMiddleware,
