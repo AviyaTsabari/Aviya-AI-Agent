@@ -1,9 +1,15 @@
-@if (projects$ | async; as data) {
-  <section class="projects-list">
-    @for (project of data.projects; track project.id) {
-      <app-project-card [project]="project" />
-    }
-  </section>
-} @else {
-  <p>Loading projects…</p>
-}
+<section class="page">
+  <h1>Projects</h1>
+
+  @if (loading()) {
+    <app-loading-spinner />
+  } @else if (error(); as errorMessage) {
+    <app-error-message [message]="errorMessage" />
+  } @else {
+    <div class="projects-list">
+      @for (project of projects(); track project.id) {
+        <app-project-card [project]="project" />
+      }
+    </div>
+  }
+</section>

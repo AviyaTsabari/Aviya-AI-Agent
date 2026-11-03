@@ -1,4 +1,8 @@
-@if (profile$ | async; as profile) {
+@if (loading()) {
+  <app-loading-spinner />
+} @else if (error(); as errorMessage) {
+  <app-error-message [message]="errorMessage" />
+} @else if (profile(); as profile) {
   <article class="profile">
     <h1>{{ profile.name }}</h1>
     <p class="title">{{ profile.title }}</p>
@@ -10,6 +14,44 @@
       <p>{{ profile.summary }}</p>
     </section>
 
+    @if (profile.education.length) {
+      <section>
+        <h2>Education</h2>
+        @for (item of profile.education; track item.degree) {
+          <p>
+            <strong>{{ item.degree }}</strong>
+            @if (item.institution) {
+              <span> — {{ item.institution }}</span>
+            }
+          </p>
+          @if (item.highlights.length) {
+            <ul>
+              @for (highlight of item.highlights; track highlight) {
+                <li>{{ highlight }}</li>
+              }
+            </ul>
+          }
+        }
+      </section>
+    }
+
+    @if (profile.languages.length) {
+      <section>
+        <h2>Languages</h2>
+        <ul>
+          @for (item of profile.languages; track item.language) {
+            <li>{{ item.language }} — {{ item.proficiency }}</li>
+          }
+        </ul>
+      </section>
+    }
+
+    <section>
+      <h2>Looking for</h2>
+      <p>{{ profile.rolePreferences.seeking.join(', ') }}</p>
+      <p>{{ profile.rolePreferences.workType.join(', ') }} · {{ profile.rolePreferences.remote }}</p>
+    </section>
+
     <section>
       <h2>Interests</h2>
       <ul>
@@ -18,7 +60,14 @@
         }
       </ul>
     </section>
+
+    @if (profile.contact.github) {
+      <section>
+        <h2>Contact</h2>
+        <p>
+          <a [href]="profile.contact.github" target="_blank" rel="noopener">GitHub</a>
+        </p>
+      </section>
+    }
   </article>
-} @else {
-  <p>Loading profile…</p>
 }

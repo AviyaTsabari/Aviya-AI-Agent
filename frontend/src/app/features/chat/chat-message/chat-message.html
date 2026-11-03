@@ -1,3 +1,10 @@
-<article class="chat-message" [class.chat-message--user]="message().role === 'user'">
-  <p>{{ message().content }}</p>
+<article class="row" [class.row--user]="isUser()">
+  <span class="avatar" aria-hidden="true">{{ initials() }}</span>
+  <div class="body">
+    <div class="meta">
+      <strong>{{ author() }}</strong>
+      <span>{{ handle() }}</span>
+    </div>
+    <p>{{ message().content }}</p>
+  </div>
 </article>

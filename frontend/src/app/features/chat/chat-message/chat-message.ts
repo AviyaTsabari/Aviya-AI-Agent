@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, computed, input } from '@angular/core';
 
 import { ChatMessage as ChatMessageModel } from '../../../core/models/chat.model';
 
@@ -10,4 +10,9 @@ import { ChatMessage as ChatMessageModel } from '../../../core/models/chat.model
 })
 export class ChatMessage {
   readonly message = input.required<ChatMessageModel>();
+
+  protected readonly isUser = computed(() => this.message().role === 'user');
+  protected readonly author = computed(() => (this.isUser() ? 'You' : 'Aviya Yosef'));
+  protected readonly handle = computed(() => (this.isUser() ? 'you' : 'engineer'));
+  protected readonly initials = computed(() => (this.isUser() ? 'YOU' : 'AY'));
 }

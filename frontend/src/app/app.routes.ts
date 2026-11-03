@@ -1,34 +1,18 @@
 import { Routes } from '@angular/router';
 
+import { Chat } from './features/chat/chat/chat';
+import { Experience } from './features/experience/experience/experience';
+import { Home } from './features/home/home/home';
+import { Profile } from './features/profile/profile';
+import { Projects } from './features/projects/projects/projects';
+import { Skills } from './features/skills/skills/skills';
+
 export const routes: Routes = [
-  {
-    path: '',
-    loadComponent: () => import('./features/home/home/home').then((m) => m.Home),
-  },
-  {
-    path: 'profile',
-    loadComponent: () => import('./features/profile/profile').then((m) => m.Profile),
-  },
-  {
-    path: 'projects',
-    loadComponent: () =>
-      import('./features/projects/projects/projects').then((m) => m.Projects),
-  },
-  {
-    path: 'skills',
-    loadComponent: () => import('./features/skills/skills/skills').then((m) => m.Skills),
-  },
-  {
-    path: 'experience',
-    loadComponent: () =>
-      import('./features/experience/experience/experience').then((m) => m.Experience),
-  },
-  {
-    path: 'chat',
-    loadComponent: () => import('./features/chat/chat/chat').then((m) => m.Chat),
-  },
-  {
-    path: '**',
-    redirectTo: '',
-  },
+  { path: '', component: Home },
+  { path: 'profile', component: Profile },
+  { path: 'projects', component: Projects },
+  { path: 'skills', component: Skills },
+  { path: 'experience', component: Experience },
+  { path: 'chat', component: Chat },
+  { path: '**', redirectTo: '' },
 ];

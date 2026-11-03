@@ -1,6 +1,6 @@
 from typing import Any
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter
 
 from app.services.knowledge_service import (
     get_experience,

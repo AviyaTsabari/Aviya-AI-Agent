@@ -1,7 +1,10 @@
-<div class="chat-input">
+<div class="composer">
+  <label class="prompt" for="chat-draft">&gt;</label>
   <input
+    id="chat-draft"
     type="text"
-    placeholder="Ask me about my background..."
+    placeholder="Ask about stack, architecture, a project, or the role you need filled..."
+    aria-label="Message Aviya"
     [value]="draft()"
     [disabled]="disabled()"
     (input)="updateDraft($event)"

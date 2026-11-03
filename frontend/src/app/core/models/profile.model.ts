@@ -4,7 +4,11 @@ export interface Language {
 }
 
 export interface Contact {
-  github: string;
+  email?: string;
+  phone?: string;
+  github?: string;
+  linkedin?: string;
+  website?: string;
 }
 
 export interface Education {

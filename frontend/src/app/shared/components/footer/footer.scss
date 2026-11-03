@@ -6,9 +6,34 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 1rem;
-  padding: 1.25rem 2rem;
-  border-top: 1px solid #e5e7eb;
-  color: #6b7280;
-  font-size: 0.875rem;
+  padding: 0.85rem 1.75rem;
+  border-top: 1px solid var(--border);
+  background: var(--bg-elevated);
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.backend-status {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--danger);
+}
+
+.dot.ok {
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-dim);
 }

@@ -1,9 +1,15 @@
-@if (experience$ | async; as data) {
-  <section class="experience-list">
-    @for (item of data.experience; track item.id) {
-      <app-experience-item [item]="item" />
-    }
-  </section>
-} @else {
-  <p>Loading experience…</p>
-}
+<section class="page">
+  <h1>Experience</h1>
+
+  @if (loading()) {
+    <app-loading-spinner />
+  } @else if (error(); as errorMessage) {
+    <app-error-message [message]="errorMessage" />
+  } @else {
+    <div class="experience-list">
+      @for (item of items(); track item.id) {
+        <app-experience-item [item]="item" />
+      }
+    </div>
+  }
+</section>

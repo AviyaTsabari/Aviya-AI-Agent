@@ -1,15 +1,47 @@
-<section class="chat">
-  <div class="chat-messages">
+<section class="workspace">
+  <header class="session">
+    <div class="identity">
+      <span class="avatar" aria-hidden="true">AY</span>
+      <div>
+        <h1>Aviya Yosef</h1>
+        <p>Software engineer · answers as herself from her knowledge base</p>
+      </div>
+    </div>
+    <p class="status"><span class="live"></span> available</p>
+  </header>
+
+  <div #messagesPane class="thread" role="log" aria-live="polite" aria-relevant="additions">
     @for (message of messages(); track $index) {
       <app-chat-message [message]="message" />
     }
 
     @if (loading()) {
-      <app-loading-spinner />
+      <div class="typing" aria-label="Aviya is typing">
+        <span class="avatar" aria-hidden="true">AY</span>
+        <div>
+          <p class="typing-label">Aviya is writing</p>
+          <span class="dots"><i></i><i></i><i></i></span>
+        </div>
+      </div>
     }
 
     @if (error(); as errorMessage) {
-      <app-error-message [message]="errorMessage" />
+      <div class="chat-error">
+        <app-error-message [message]="errorMessage" />
+        <button type="button" class="retry" (click)="retry()">Retry last message</button>
+      </div>
+    }
+
+    @if (messages().length === 1 && !loading()) {
+      <div class="prompts">
+        <p>Start with a technical question</p>
+        @for (suggestion of suggestions; track suggestion) {
+          <button type="button" (click)="sendMessage(suggestion)">
+            <span>&gt;</span>
+            {{ suggestion }}
+          </button>
+        }
+      </div>
     }
   </div>
 

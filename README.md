@@ -23,13 +23,12 @@ The project is built as a full-stack application using Angular and FastAPI.
 
 The project currently includes:
 
-* Angular frontend
-* FastAPI backend
-* Communication between the frontend and backend
-* Backend health-check endpoint
-* Initial project structure
-
-The AI chat capabilities and personal knowledge base are currently under development.
+* Angular frontend with profile, skills, projects, experience, and chat pages
+* FastAPI backend with knowledge and chat APIs
+* A structured personal knowledge base in JSON
+* Recruiter chat that answers as Aviya
+* Optional Claude integration when `ANTHROPIC_API_KEY` is set
+* A local knowledge-base fallback so chat works without an API key
 
 ## Planned Features
 
@@ -197,14 +196,18 @@ Example response:
 }
 ```
 
-Additional endpoints will be added for:
+### Knowledge and chat
 
 ```text
 GET  /api/profile
 GET  /api/projects
 GET  /api/skills
+GET  /api/experience
+GET  /api/knowledge
 POST /api/chat
 ```
+
+`POST /api/chat` accepts `{ "message": "...", "history": [] }` and returns `{ "reply": "..." }`.
 
 ## Development Roadmap
 
@@ -267,7 +270,7 @@ This project demonstrates practical experience with:
 
 ## Author
 
-**Aviya Tsabari**
+**Aviya Yosef**
 
 Computer Science graduate with experience in software development, databases, compiler construction, algorithms, and reverse engineering.
 

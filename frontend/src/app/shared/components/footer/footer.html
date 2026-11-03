@@ -1,7 +1,10 @@
 <footer class="site-footer">
-  <p>&copy; Aviya Tsabari</p>
+  <p>&copy; Aviya Yosef</p>
 
   @if (backendStatus()) {
-    <p class="backend-status">Backend: {{ backendStatus() }}</p>
+    <p class="backend-status">
+      <span class="dot" [class.ok]="backendStatus() === 'healthy'"></span>
+      api {{ backendStatus() }}
+    </p>
   }
 </footer>

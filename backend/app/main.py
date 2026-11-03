@@ -11,12 +11,12 @@ from app.api.knowledge import router as knowledge_router
 
 app = FastAPI(
     title="Aviya AI Agent API",
-    description="AI-powered career agent representing Aviya Tsabari.",
+    description="AI-powered career agent representing Aviya Yosef.",
     version="1.0.0",
 )
 
-default_origins = "http://localhost:4200"
-origins = os.environ.get("ALLOWED_ORIGINS", default_origins).split(",")
+default_origins = "http://localhost:4200,http://127.0.0.1:4200"
+origins = [origin.strip() for origin in os.environ.get("ALLOWED_ORIGINS", default_origins).split(",") if origin.strip()]
 
 app.add_middleware(
     CORSMiddleware,

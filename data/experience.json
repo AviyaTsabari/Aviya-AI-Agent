@@ -1,18 +1,46 @@
 {
   "experience": [
     {
-      "id": "example-role",
-      "title": "Software Developer",
-      "company": "",
-      "employmentType": "Full-time",
-      "location": "",
+      "id": "aviya-ai-agent",
+      "title": "Full-Stack Developer",
+      "company": "Aviya AI Agent (personal project)",
+      "employmentType": "Project",
+      "location": "Israel",
+      "startDate": "2026",
+      "endDate": "",
+      "current": true,
+      "description": "Building an AI-powered personal career agent that lets recruiters ask about my background and receive focused answers through an interactive chat interface.",
+      "responsibilities": [
+        "Designed a full-stack architecture with an Angular frontend and FastAPI backend",
+        "Structured a personal knowledge base for profile, skills, projects, and experience",
+        "Implemented a recruiter-facing chat that answers from that knowledge base"
+      ],
+      "technologies": ["Angular", "TypeScript", "FastAPI", "Python", "Pydantic"],
+      "achievements": [
+        "Turned a static resume into an interactive conversation",
+        "Connected frontend chat to a FastAPI knowledge and chat API"
+      ]
+    },
+    {
+      "id": "academic-projects",
+      "title": "Computer Science Academic Projects",
+      "company": "B.Sc. in Computer Science",
+      "employmentType": "Academic",
+      "location": "Israel",
       "startDate": "",
       "endDate": "",
       "current": false,
-      "description": "Describe your responsibilities and impact in this role.",
-      "responsibilities": [],
-      "technologies": [],
-      "achievements": []
+      "description": "Hands-on coursework covering compiler construction, algorithms, databases, and reverse engineering.",
+      "responsibilities": [
+        "Implemented core compiler stages including lexical analysis, parsing, and code generation",
+        "Applied reverse engineering techniques to analyze compiled programs",
+        "Worked with SQL and relational database design"
+      ],
+      "technologies": ["C", "SQL", "Algorithms", "Assembly"],
+      "achievements": [
+        "Built a compiler as part of compiler construction coursework",
+        "Completed reverse engineering analysis of compiled programs"
+      ]
     }
   ]
 }

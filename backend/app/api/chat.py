@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException
-from pydantic import BaseModel
+from pydantic import BaseModel, Field, field_validator
 
 from app.services.chat_service import ChatMessage, get_chat_response
 
@@ -10,8 +10,16 @@ router = APIRouter(
 
 
 class ChatRequest(BaseModel):
-    message: str
-    history: list[ChatMessage] = []
+    message: str = Field(min_length=1, max_length=4000)
+    history: list[ChatMessage] = Field(default_factory=list, max_length=40)
+
+    @field_validator("message")
+    @classmethod
+    def strip_message(cls, value: str) -> str:
+        stripped = value.strip()
+        if not stripped:
+            raise ValueError("message cannot be empty")
+        return stripped
 
 
 class ChatResponse(BaseModel):

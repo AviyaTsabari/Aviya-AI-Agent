@@ -1,9 +1,15 @@
-@if (skills$ | async; as data) {
-  <section class="skills-list">
-    @for (category of data.categories; track category.name) {
-      <app-skill-category [category]="category" />
-    }
-  </section>
-} @else {
-  <p>Loading skills…</p>
-}
+<section class="page">
+  <h1>Skills</h1>
+
+  @if (loading()) {
+    <app-loading-spinner />
+  } @else if (error(); as errorMessage) {
+    <app-error-message [message]="errorMessage" />
+  } @else {
+    <div class="skills-list">
+      @for (category of categories(); track category.name) {
+        <app-skill-category [category]="category" />
+      }
+    </div>
+  }
+</section>

@@ -1,0 +1,20 @@
+.page {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1.5rem 3rem;
+}
+
+h1 {
+  letter-spacing: -0.03em;
+}
+
+.projects-list {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .projects-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

@@ -1,26 +1,49 @@
-.chat-input {
+.composer {
   display: flex;
-  gap: 0.75rem;
-  padding: 1rem;
-  border-top: 1px solid #e5e7eb;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.9rem 1.1rem 1.1rem;
+  border-top: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+
+.prompt {
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 1rem;
 }
 
 input {
   flex: 1;
-  padding: 0.65rem 0.9rem;
-  border: 1px solid #d1d5db;
-  border-radius: 0.5rem;
-  font-size: 1rem;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 0.6rem;
+  background: var(--surface);
+  font-size: 0.95rem;
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+}
+
+input::placeholder {
+  color: var(--muted);
 }
 
 button {
-  padding: 0.65rem 1.25rem;
+  padding: 0.75rem 1.1rem;
   border: none;
-  border-radius: 0.5rem;
-  background: #111827;
-  color: #fff;
-  font-weight: 600;
+  border-radius: 0.6rem;
+  background: var(--accent);
+  color: #042422;
+  font-weight: 650;
   cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  filter: brightness(1.05);
 }
 
 button:disabled,

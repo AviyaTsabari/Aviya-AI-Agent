@@ -1,9 +1,16 @@
 <article class="experience-item">
   <h3>{{ item().title }}</h3>
-  <p class="company">{{ item().company }}</p>
-  <p class="dates">
-    {{ item().startDate }} — {{ item().current ? 'Present' : item().endDate }}
-  </p>
+  @if (item().company) {
+    <p class="company">{{ item().company }}</p>
+  }
+  @if (item().startDate || item().endDate || item().current) {
+    <p class="dates">
+      {{ item().startDate }}
+      @if (item().startDate || item().current || item().endDate) {
+        <span> — {{ item().current ? 'Present' : item().endDate }}</span>
+      }
+    </p>
+  }
   <p class="description">{{ item().description }}</p>
 
   @if (item().achievements.length) {

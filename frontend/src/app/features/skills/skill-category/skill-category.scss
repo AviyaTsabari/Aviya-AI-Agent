@@ -1,0 +1,35 @@
+.skill-category {
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  height: 100%;
+}
+
+h3 {
+  margin: 0 0 0.75rem;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+.skill-level {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+}
