@@ -19,6 +19,24 @@ Instead of presenting only a static resume, this project provides an interactive
 
 The project is built as a full-stack application using Angular and FastAPI.
 
+## ScreenShots
+
+<div align="center">
+    
+<img width="836" height="865" alt="צילום מסך 2026-11-08 190332" src="https://github.com/user-attachments/assets/43f9335f-0686-4c33-961c-c29c28de4b36" />
+
+<img width="830" height="851" alt="צילום מסך 2026-11-08 190342" src="https://github.com/user-attachments/assets/9a25000c-c2ce-4c7b-9190-2e90dc51ba95" />
+
+<img width="823" height="605" alt="צילום מסך 2026-11-08 190354" src="https://github.com/user-attachments/assets/aedad9b6-871c-471b-921c-522476c43819" />
+
+<img width="841" height="866" alt="צילום מסך 2026-11-08 190416" src="https://github.com/user-attachments/assets/232cf4c6-a641-4eab-91b2-372a89f19eda" />
+
+<img width="862" height="862" alt="צילום מסך 2026-11-08 190445" src="https://github.com/user-attachments/assets/6032aa38-0b7d-48c4-815b-46130bb7f35d" />
+
+<img width="867" height="862" alt="צילום מסך 2026-11-08 190319" src="https://github.com/user-attachments/assets/25c3b29f-a163-441b-b1e7-339d34473d33" />
+
+</div>
+
 ## Current Status
 
 The project currently includes:
