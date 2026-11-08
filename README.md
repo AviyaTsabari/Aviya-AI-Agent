@@ -22,14 +22,14 @@ The project is built as a full-stack application using Angular and FastAPI.
 ## ScreenShots
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/43f9335f-0686-4c33-961c-c29c28de4b36" width="180" />
-  <img src="https://github.com/user-attachments/assets/9a25000c-c2ce-4c7b-9190-2e90dc51ba95" width="180" />
+  <img src="https://github.com/user-attachments/assets/43f9335f-0686-4c33-961c-c29c28de4b36" width="250" />
+  <img src="https://github.com/user-attachments/assets/9a25000c-c2ce-4c7b-9190-2e90dc51ba95" width="250" />
   <br/>
-  <img src="https://github.com/user-attachments/assets/aedad9b6-871c-471b-921c-522476c43819" width="180" />
-  <img src="https://github.com/user-attachments/assets/232cf4c6-a641-4eab-91b2-372a89f19eda" width="180" />
+  <img src="https://github.com/user-attachments/assets/aedad9b6-871c-471b-921c-522476c43819" width="250" />
+  <img src="https://github.com/user-attachments/assets/232cf4c6-a641-4eab-91b2-372a89f19eda" width="250" />
   <br/>
-  <img src="https://github.com/user-attachments/assets/6032aa38-0b7d-48c4-815b-46130bb7f35d" width="180" />
-  <img src="https://github.com/user-attachments/assets/25c3b29f-a163-441b-b1e7-339d34473d33" width="180" />
+  <img src="https://github.com/user-attachments/assets/6032aa38-0b7d-48c4-815b-46130bb7f35d" width="250" />
+  <img src="https://github.com/user-attachments/assets/25c3b29f-a163-441b-b1e7-339d34473d33" width="250" />
 </div>
 
 ## Current Status
